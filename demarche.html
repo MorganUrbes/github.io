@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ma démarche — Morgan Urbes</title>
+  <meta name="description" content="Une démarche centrée utilisateur en 6 étapes : Observer, Comprendre, Définir, Concevoir, Tester, Améliorer." />
+  <base href="/github.io/">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="demarche.css" />
+</head>
+<body class="page-demarche">
+
+  <!-- NAV -->
+  <header class="nav-wrapper scrolled" id="navbar">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Morgan Urbes — Accueil">
+        <span class="logo-mark">M</span><span class="logo-sep">·</span><span class="logo-name">Morgan Urbes</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="demarche.html" class="nav-link active">Ma démarche</a></li>
+        <li><a href="index.html#projets"     class="nav-link">Projets</a></li>
+        <li><a href="index.html#experiences" class="nav-link">Expériences</a></li>
+        <li><a href="index.html#formations"  class="nav-link">Formations</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">CV</a>
+      <button class="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu" hidden>
+      <a href="demarche.html"          class="mobile-link active">Ma démarche</a>
+      <a href="index.html#projets"     class="mobile-link">Projets</a>
+      <a href="index.html#experiences" class="mobile-link">Expériences</a>
+      <a href="index.html#formations"  class="mobile-link">Formations</a>
+      <a href="index.html#contact"     class="mobile-link mobile-link--cta">CV</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO DÉMARCHE -->
+    <section class="dm-hero">
+      <div class="dm-hero-bg" aria-hidden="true">
+        <div class="halo halo--cyan-tl"></div>
+        <div class="halo halo--violet-tr"></div>
+      </div>
+      <div class="container">
+        <div class="dm-hero-inner">
+          <p class="section-eyebrow section-eyebrow--light reveal-line" data-delay="0">Ma démarche</p>
+          <h1 class="dm-hero-title reveal-line" data-delay="80">Une démarche centrée<br>utilisateur de bout en bout</h1>
+          <p class="dm-hero-body reveal-line" data-delay="180">Une méthode en 6 étapes pour comprendre en profondeur, concevoir des solutions pertinentes et générer un impact durable.</p>
+
+          <!-- Steps nav pills -->
+          <nav class="dm-steps-nav reveal-line" data-delay="280" aria-label="Navigation par étape">
+            <a href="#observer"    class="dm-step-pill">01 — Observer</a>
+            <a href="#comprendre"  class="dm-step-pill">02 — Comprendre</a>
+            <a href="#definir"     class="dm-step-pill">03 — Définir</a>
+            <a href="#concevoir"   class="dm-step-pill">04 — Concevoir</a>
+            <a href="#tester"      class="dm-step-pill">05 — Tester</a>
+            <a href="#ameliorer"   class="dm-step-pill">06 — Améliorer</a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         ÉTAPE 01 — OBSERVER
+    ══════════════════════════════════ -->
+    <section class="dm-step-section dm-step-section--dark" id="observer" aria-labelledby="step1-title">
+      <div class="container">
+        <div class="dm-step-header reveal-up">
+          <span class="dm-step-num">01</span>
+          <div>
+            <h2 class="dm-step-title" id="step1-title">Observer.</h2>
+            <p class="dm-step-subtitle">Tout commence par la compréhension du terrain.</p>
+          </div>
+        </div>
+
+        <div class="dm-step-body">
+          <p class="dm-step-intro reveal-up">Avant de chercher une solution, je prends le temps de comprendre votre réalité. J'observe les usages, j'écoute les utilisateurs, j'analyse le fonctionnement de l'organisation et son environnement afin d'identifier les véritables enjeux du projet.</p>
+
+          <div class="dm-columns">
+            <div class="dm-col">
+              <h3 class="dm-col-title reveal-up">Ce que j'analyse</h3>
+              <div class="dm-items-grid">
+                <article class="dm-item reveal-up" data-delay="0">
+                  <h4 class="dm-item-title">Les utilisateurs</h4>
+                  <p class="dm-item-desc">Qui sont-ils ? Quels sont leurs besoins, leurs habitudes, leurs attentes et leurs difficultés ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="60">
+                  <h4 class="dm-item-title">Les parcours et usages</h4>
+                  <p class="dm-item-desc">Comment utilisent-ils aujourd'hui votre produit, votre service ou votre organisation ? Quelles sont les étapes importantes de leur expérience ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="120">
+                  <h4 class="dm-item-title">Le contexte</h4>
+                  <p class="dm-item-desc">Quels objectifs, contraintes, ressources ou obligations influencent les décisions et les possibilités d'évolution ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="0">
+                  <h4 class="dm-item-title">Les points de friction</h4>
+                  <p class="dm-item-desc">Où apparaissent les incompréhensions, les pertes de temps, les erreurs ou les frustrations ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="60">
+                  <h4 class="dm-item-title">Les opportunités</h4>
+                  <p class="dm-item-desc">Quels leviers permettraient d'améliorer l'expérience tout en créant davantage de valeur pour votre organisation ?</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="dm-col">
+              <h3 class="dm-col-title reveal-up">Exemples de livrables</h3>
+              <div class="dm-deliverables">
+                <article class="dm-deliverable reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">📋</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Étude utilisateur</h4>
+                    <p class="dm-deliverable-desc">Comprendre les besoins réels grâce à des entretiens, observations terrain, questionnaires ou ateliers de discussion.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">📊</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Étude de marché</h4>
+                    <p class="dm-deliverable-desc">Analyser votre secteur, les tendances, les attentes des utilisateurs et le positionnement de votre offre.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="120">
+                  <span class="dm-deliverable-icon">🔍</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Analyse concurrentielle</h4>
+                    <p class="dm-deliverable-desc">Comparer les solutions existantes afin d'identifier leurs forces, leurs limites et les opportunités de différenciation.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">🗺️</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Cartographie du parcours</h4>
+                    <p class="dm-deliverable-desc">Visualiser les différentes étapes vécues par l'utilisateur afin d'identifier les moments clés et les points de friction.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">📝</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Synthèse des observations</h4>
+                    <p class="dm-deliverable-desc">Regrouper les enseignements majeurs, prioriser les constats et préparer les décisions pour la suite du projet.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         ÉTAPE 02 — COMPRENDRE
+    ══════════════════════════════════ -->
+    <section class="dm-step-section dm-step-section--light" id="comprendre" aria-labelledby="step2-title">
+      <div class="container">
+        <div class="dm-step-header reveal-up">
+          <span class="dm-step-num dm-step-num--dark">02</span>
+          <div>
+            <h2 class="dm-step-title dm-step-title--dark" id="step2-title">Comprendre.</h2>
+            <p class="dm-step-subtitle dm-step-subtitle--dark">Transformer les observations en décisions.</p>
+          </div>
+        </div>
+
+        <div class="dm-step-body">
+          <p class="dm-step-intro dm-step-intro--dark reveal-up">Les informations récoltées prennent de la valeur lorsqu'elles sont analysées. Cette étape permet de faire émerger les véritables causes des difficultés rencontrées et d'identifier les priorités du projet.</p>
+
+          <div class="dm-columns">
+            <div class="dm-col">
+              <h3 class="dm-col-title dm-col-title--dark reveal-up">Ce que j'analyse</h3>
+              <div class="dm-items-grid">
+                <article class="dm-item dm-item--light reveal-up" data-delay="0">
+                  <h4 class="dm-item-title dm-item-title--dark">Les enseignements</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Quels constats reviennent le plus souvent ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="60">
+                  <h4 class="dm-item-title dm-item-title--dark">Les besoins prioritaires</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Quels besoins sont essentiels pour les utilisateurs comme pour l'organisation ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="120">
+                  <h4 class="dm-item-title dm-item-title--dark">Les causes</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Pourquoi les difficultés existent-elles réellement ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="0">
+                  <h4 class="dm-item-title dm-item-title--dark">Les enjeux</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Quels problèmes auront le plus d'impact une fois résolus ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="60">
+                  <h4 class="dm-item-title dm-item-title--dark">Les opportunités</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Quelles pistes méritent d'être explorées ?</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="dm-col">
+              <h3 class="dm-col-title dm-col-title--dark reveal-up">Exemples de livrables</h3>
+              <div class="dm-deliverables">
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">💡</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Synthèse des enseignements</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Une vision claire des observations réalisées.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">🎯</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Priorisation des enjeux</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Identifier les sujets les plus importants.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="120">
+                  <span class="dm-deliverable-icon">👤</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Personas <span class="dm-tag-optional">si pertinent</span></h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Représenter les profils utilisateurs afin de mieux guider les décisions.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">🗺️</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Cartographie des besoins</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Visualiser les attentes principales des utilisateurs.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">📢</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Restitution des analyses</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Partager les conclusions avec les parties prenantes.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         ÉTAPE 03 — DÉFINIR
+    ══════════════════════════════════ -->
+    <section class="dm-step-section dm-step-section--dark" id="definir" aria-labelledby="step3-title">
+      <div class="container">
+        <div class="dm-step-header reveal-up">
+          <span class="dm-step-num">03</span>
+          <div>
+            <h2 class="dm-step-title" id="step3-title">Définir.</h2>
+            <p class="dm-step-subtitle">Donner une direction claire au projet.</p>
+          </div>
+        </div>
+
+        <div class="dm-step-body">
+          <p class="dm-step-intro reveal-up">Une fois les enjeux identifiés, il devient possible de définir les objectifs, les priorités et les critères de réussite. Cette étape aligne les besoins des utilisateurs avec les objectifs de l'organisation.</p>
+
+          <div class="dm-columns">
+            <div class="dm-col">
+              <h3 class="dm-col-title reveal-up">Ce que j'analyse</h3>
+              <div class="dm-items-grid">
+                <article class="dm-item reveal-up" data-delay="0">
+                  <h4 class="dm-item-title">Les objectifs</h4>
+                  <p class="dm-item-desc">Que souhaite réellement atteindre le projet ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="60">
+                  <h4 class="dm-item-title">Les priorités</h4>
+                  <p class="dm-item-desc">Qu'est-il important de résoudre en premier ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="120">
+                  <h4 class="dm-item-title">Les contraintes</h4>
+                  <p class="dm-item-desc">Budget, délais, ressources, réglementation, faisabilité.</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="0">
+                  <h4 class="dm-item-title">Les indicateurs</h4>
+                  <p class="dm-item-desc">Comment mesurer le succès ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="60">
+                  <h4 class="dm-item-title">Les scénarios</h4>
+                  <p class="dm-item-desc">Quelles orientations semblent les plus pertinentes ?</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="dm-col">
+              <h3 class="dm-col-title reveal-up">Exemples de livrables</h3>
+              <div class="dm-deliverables">
+                <article class="dm-deliverable reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">📄</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Cahier des besoins</h4>
+                    <p class="dm-deliverable-desc">Formaliser les attentes du projet.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">📌</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Priorisation des fonctionnalités</h4>
+                    <p class="dm-deliverable-desc">Déterminer ce qui apporte le plus de valeur.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="120">
+                  <span class="dm-deliverable-icon">📖</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">User Stories <span class="dm-tag-optional">si pertinent</span></h4>
+                    <p class="dm-deliverable-desc">Décrire les besoins du point de vue des utilisateurs.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">🛤️</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Parcours cibles</h4>
+                    <p class="dm-deliverable-desc">Imaginer l'expérience souhaitée.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">🗓️</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Feuille de route</h4>
+                    <p class="dm-deliverable-desc">Structurer les prochaines étapes.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         ÉTAPE 04 — CONCEVOIR
+    ══════════════════════════════════ -->
+    <section class="dm-step-section dm-step-section--light" id="concevoir" aria-labelledby="step4-title">
+      <div class="container">
+        <div class="dm-step-header reveal-up">
+          <span class="dm-step-num dm-step-num--dark">04</span>
+          <div>
+            <h2 class="dm-step-title dm-step-title--dark" id="step4-title">Concevoir.</h2>
+            <p class="dm-step-subtitle dm-step-subtitle--dark">Transformer les idées en solutions.</p>
+          </div>
+        </div>
+
+        <div class="dm-step-body">
+          <p class="dm-step-intro dm-step-intro--dark reveal-up">À partir des besoins identifiés, j'imagine des solutions simples, cohérentes et adaptées à votre contexte. Selon les projets, cela peut concerner une interface numérique, un parcours client, un service, un support de communication ou un produit physique.</p>
+
+          <div class="dm-columns">
+            <div class="dm-col">
+              <h3 class="dm-col-title dm-col-title--dark reveal-up">Ce que j'analyse</h3>
+              <div class="dm-items-grid">
+                <article class="dm-item dm-item--light reveal-up" data-delay="0">
+                  <h4 class="dm-item-title dm-item-title--dark">Les usages futurs</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Comment faciliter l'expérience ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="60">
+                  <h4 class="dm-item-title dm-item-title--dark">La compréhension</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">L'information est-elle claire ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="120">
+                  <h4 class="dm-item-title dm-item-title--dark">La cohérence</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Tous les éléments fonctionnent-ils ensemble ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="0">
+                  <h4 class="dm-item-title dm-item-title--dark">L'identité</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">La solution reflète-t-elle votre image ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="60">
+                  <h4 class="dm-item-title dm-item-title--dark">L'accessibilité</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Le plus grand nombre peut-il utiliser la solution facilement ?</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="dm-col">
+              <h3 class="dm-col-title dm-col-title--dark reveal-up">Exemples de livrables</h3>
+              <div class="dm-deliverables">
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">🖼️</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Wireframes <span class="dm-tag-optional">si nécessaire</span></h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Structurer les idées avant la conception graphique.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">💻</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Maquettes d'interface</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Concevoir des interfaces web ou mobiles.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="120">
+                  <span class="dm-deliverable-icon">🔄</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Parcours de service</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Imaginer une expérience fluide de bout en bout.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">🎨</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Supports graphiques</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Illustrations, schémas, infographies ou supports de communication lorsque cela apporte de la valeur.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">⚡</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Prototype interactif</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Permettre de tester rapidement une solution.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         ÉTAPE 05 — TESTER
+    ══════════════════════════════════ -->
+    <section class="dm-step-section dm-step-section--dark" id="tester" aria-labelledby="step5-title">
+      <div class="container">
+        <div class="dm-step-header reveal-up">
+          <span class="dm-step-num">05</span>
+          <div>
+            <h2 class="dm-step-title" id="step5-title">Tester.</h2>
+            <p class="dm-step-subtitle">Vérifier avant de déployer.</p>
+          </div>
+        </div>
+
+        <div class="dm-step-body">
+          <p class="dm-step-intro reveal-up">Les meilleures idées restent des hypothèses tant qu'elles n'ont pas été confrontées à la réalité. Tester permet d'identifier rapidement les améliorations à apporter.</p>
+
+          <div class="dm-columns">
+            <div class="dm-col">
+              <h3 class="dm-col-title reveal-up">Ce que j'analyse</h3>
+              <div class="dm-items-grid">
+                <article class="dm-item reveal-up" data-delay="0">
+                  <h4 class="dm-item-title">La compréhension</h4>
+                  <p class="dm-item-desc">Les utilisateurs savent-ils quoi faire ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="60">
+                  <h4 class="dm-item-title">Les difficultés</h4>
+                  <p class="dm-item-desc">Où rencontrent-ils des obstacles ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="120">
+                  <h4 class="dm-item-title">Les réactions</h4>
+                  <p class="dm-item-desc">Comment perçoivent-ils l'expérience ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="0">
+                  <h4 class="dm-item-title">Les performances</h4>
+                  <p class="dm-item-desc">Les objectifs sont-ils atteints ?</p>
+                </article>
+                <article class="dm-item reveal-up" data-delay="60">
+                  <h4 class="dm-item-title">Les retours</h4>
+                  <p class="dm-item-desc">Quelles améliorations reviennent le plus souvent ?</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="dm-col">
+              <h3 class="dm-col-title reveal-up">Exemples de livrables</h3>
+              <div class="dm-deliverables">
+                <article class="dm-deliverable reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">👥</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Tests utilisateurs</h4>
+                    <p class="dm-deliverable-desc">Observer des personnes utiliser la solution.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">📋</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Rapport d'observation</h4>
+                    <p class="dm-deliverable-desc">Synthétiser les difficultés rencontrées.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="120">
+                  <span class="dm-deliverable-icon">🎯</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Priorisation des améliorations</h4>
+                    <p class="dm-deliverable-desc">Identifier les actions les plus pertinentes.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">🔁</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Itérations</h4>
+                    <p class="dm-deliverable-desc">Faire évoluer la solution.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">✅</span>
+                  <div>
+                    <h4 class="dm-deliverable-title">Validation</h4>
+                    <p class="dm-deliverable-desc">Confirmer que les objectifs sont atteints.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════
+         ÉTAPE 06 — AMÉLIORER
+    ══════════════════════════════════ -->
+    <section class="dm-step-section dm-step-section--light" id="ameliorer" aria-labelledby="step6-title">
+      <div class="container">
+        <div class="dm-step-header reveal-up">
+          <span class="dm-step-num dm-step-num--dark">06</span>
+          <div>
+            <h2 class="dm-step-title dm-step-title--dark" id="step6-title">Améliorer.</h2>
+            <p class="dm-step-subtitle dm-step-subtitle--dark">Une solution évolue avec son contexte.</p>
+          </div>
+        </div>
+
+        <div class="dm-step-body">
+          <p class="dm-step-intro dm-step-intro--dark reveal-up">Les besoins changent, les usages évoluent et de nouvelles contraintes apparaissent. Une démarche de conception ne s'arrête pas à la livraison : elle continue grâce aux retours du terrain.</p>
+
+          <div class="dm-columns">
+            <div class="dm-col">
+              <h3 class="dm-col-title dm-col-title--dark reveal-up">Ce que j'analyse</h3>
+              <div class="dm-items-grid">
+                <article class="dm-item dm-item--light reveal-up" data-delay="0">
+                  <h4 class="dm-item-title dm-item-title--dark">Les usages réels</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Comment la solution est-elle utilisée ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="60">
+                  <h4 class="dm-item-title dm-item-title--dark">Les nouveaux besoins</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Qu'est-ce qui a changé ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="120">
+                  <h4 class="dm-item-title dm-item-title--dark">Les performances</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Les objectifs sont-ils toujours atteints ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="0">
+                  <h4 class="dm-item-title dm-item-title--dark">Les retours</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Quels nouveaux problèmes apparaissent ?</p>
+                </article>
+                <article class="dm-item dm-item--light reveal-up" data-delay="60">
+                  <h4 class="dm-item-title dm-item-title--dark">Les opportunités</h4>
+                  <p class="dm-item-desc dm-item-desc--dark">Comment continuer à créer de la valeur ?</p>
+                </article>
+              </div>
+            </div>
+
+            <div class="dm-col">
+              <h3 class="dm-col-title dm-col-title--dark reveal-up">Exemples de livrables</h3>
+              <div class="dm-deliverables">
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">📈</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Plan d'amélioration continue</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Prioriser les évolutions futures.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">💡</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Recommandations</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Proposer des actions concrètes.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="120">
+                  <span class="dm-deliverable-icon">📚</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Documentation</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Conserver une vision claire des évolutions.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="0">
+                  <span class="dm-deliverable-icon">🤝</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Accompagnement</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Aider les équipes à faire évoluer le projet.</p>
+                  </div>
+                </article>
+                <article class="dm-deliverable dm-deliverable--light reveal-up" data-delay="60">
+                  <span class="dm-deliverable-icon">🔁</span>
+                  <div>
+                    <h4 class="dm-deliverable-title dm-deliverable-title--dark">Nouvelles itérations</h4>
+                    <p class="dm-deliverable-desc dm-deliverable-desc--dark">Concevoir les prochaines améliorations.</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="dm-cta section-dark">
+      <div class="dm-cta-bg" aria-hidden="true">
+        <div class="halo halo--cyan-tl" style="opacity:0.4;"></div>
+        <div class="halo halo--violet-tr" style="opacity:0.4;"></div>
+      </div>
+      <div class="container">
+        <div class="dm-cta-inner reveal-up">
+          <p class="section-eyebrow section-eyebrow--light">Travaillons ensemble</p>
+          <h2 class="dm-cta-title">Vous avez un projet ?</h2>
+          <p class="dm-cta-body">Cette démarche s'adapte à chaque contexte. Parlons de votre projet pour voir comment je peux vous accompagner.</p>
+          <div class="dm-cta-actions">
+            <a href="index.html#contact" class="btn btn--primary">Démarrer une conversation</a>
+            <a href="index.html#projets" class="btn btn--ghost">Voir mes projets</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+  <script src="demarche.js"></script>
+</body>
+</html>
