@@ -12,23 +12,21 @@ function updateProgress() {
 window.addEventListener('scroll', updateProgress, { passive: true });
 updateProgress();
 
-// ── Active pill au scroll ────────────────────
-const pills    = document.querySelectorAll('.dm-step-pill');
-const stepSecs = document.querySelectorAll('.dm-step-section[id]');
+// ── Active step au scroll ────────────────────
+const stepLinks = document.querySelectorAll('.dm-step-link');
+const stepSecs  = document.querySelectorAll('.dm-step-section[id]');
 
-function updateActivePill() {
+function updateActiveStep() {
   const y = window.scrollY + window.innerHeight * 0.3;
   let current = '';
-  stepSecs.forEach(sec => {
-    if (y >= sec.offsetTop) current = sec.id;
-  });
-  pills.forEach(pill => {
-    const href = pill.getAttribute('href').replace('#', '');
-    pill.classList.toggle('active', href === current);
+  stepSecs.forEach(sec => { if (y >= sec.offsetTop) current = sec.id; });
+  stepLinks.forEach(link => {
+    const href = link.getAttribute('href').replace('#', '');
+    link.classList.toggle('dm-step-active', href === current);
   });
 }
-window.addEventListener('scroll', updateActivePill, { passive: true });
-updateActivePill();
+window.addEventListener('scroll', updateActiveStep, { passive: true });
+updateActiveStep();
 
 // ── Inject barre de progression dans le DOM ──
 const progressBar = document.createElement('div');

@@ -42,27 +42,46 @@
 
   <main>
 
-    <!-- HERO DÉMARCHE -->
+    <!-- HERO DÉMARCHE — même style que section approche home -->
     <section class="dm-hero">
       <div class="dm-hero-bg" aria-hidden="true">
         <div class="halo halo--cyan-tl"></div>
         <div class="halo halo--violet-tr"></div>
+        <!-- Forme organique identique au hero home -->
+        <svg class="hero-shape" viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="shapeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"   stop-color="#060B18" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#0A1020" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <path
+            d="M -100 340
+               C 100 300, 260 180, 480 160
+               C 700 140, 880 200, 1100 150
+               C 1240 120, 1360 110, 1540 130
+               L 1540 700 L -100 700 Z"
+            fill="url(#shapeGrad2)"
+            class="organic-shape"
+          />
+        </svg>
       </div>
       <div class="container">
         <div class="dm-hero-inner">
-          <p class="section-eyebrow section-eyebrow--light reveal-line" data-delay="0">Ma démarche</p>
-          <h1 class="dm-hero-title reveal-line" data-delay="80">Une démarche centrée<br>utilisateur de bout en bout</h1>
+          <p class="section-eyebrow section-eyebrow--light reveal-line" data-delay="0">Mon approche</p>
+          <h1 class="dm-hero-title reveal-line" data-delay="80">Une démarche centrée utilisateur de bout en bout</h1>
           <p class="dm-hero-body reveal-line" data-delay="180">Une méthode en 6 étapes pour comprendre en profondeur, concevoir des solutions pertinentes et générer un impact durable.</p>
+        </div>
 
-          <!-- Steps nav pills -->
-          <nav class="dm-steps-nav reveal-line" data-delay="280" aria-label="Navigation par étape">
-            <a href="#observer"    class="dm-step-pill">01 — Observer</a>
-            <a href="#comprendre"  class="dm-step-pill">02 — Comprendre</a>
-            <a href="#definir"     class="dm-step-pill">03 — Définir</a>
-            <a href="#concevoir"   class="dm-step-pill">04 — Concevoir</a>
-            <a href="#tester"      class="dm-step-pill">05 — Tester</a>
-            <a href="#ameliorer"   class="dm-step-pill">06 — Améliorer</a>
-          </nav>
+        <!-- Steps numérotés avec ligne connectrice — identique à la home -->
+        <div class="steps-track dm-steps-track" role="list">
+          <div class="steps-line" aria-hidden="true"></div>
+          <a href="#observer"   class="step dm-step-link reveal-up" data-delay="0"   role="listitem"><div class="step-number" aria-hidden="true">1</div><h3 class="step-label">Observer</h3></a>
+          <a href="#comprendre" class="step dm-step-link reveal-up" data-delay="80"  role="listitem"><div class="step-number" aria-hidden="true">2</div><h3 class="step-label">Comprendre</h3></a>
+          <a href="#definir"    class="step dm-step-link reveal-up" data-delay="160" role="listitem"><div class="step-number" aria-hidden="true">3</div><h3 class="step-label">Définir</h3></a>
+          <a href="#concevoir"  class="step dm-step-link reveal-up" data-delay="240" role="listitem"><div class="step-number" aria-hidden="true">4</div><h3 class="step-label">Concevoir</h3></a>
+          <a href="#tester"     class="step dm-step-link reveal-up" data-delay="320" role="listitem"><div class="step-number" aria-hidden="true">5</div><h3 class="step-label">Tester</h3></a>
+          <a href="#ameliorer"  class="step dm-step-link reveal-up" data-delay="400" role="listitem"><div class="step-number" aria-hidden="true">6</div><h3 class="step-label">Ajuster</h3></a>
         </div>
       </div>
     </section>
