@@ -2,7 +2,6 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <base href="/github.io/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Morgan Urbes — UX/Product Designer</title>
   <meta name="description" content="Morgan Urbes — Designer UX/UI & Produit. Je transforme des idées complexes en expériences simples, utiles et mémorables." />
@@ -43,12 +42,35 @@
 
     <!-- HERO -->
     <section class="hero" id="hero" aria-label="Introduction">
-      <div class="hero-bg">
-        <div class="orb orb--1" aria-hidden="true"></div>
-        <div class="orb orb--2" aria-hidden="true"></div>
-        <div class="orb orb--3" aria-hidden="true"></div>
-        <div class="orb orb--4" aria-hidden="true"></div>
-        <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-bg" aria-hidden="true">
+
+        <!-- Halos lumineux — pré-floutés, animation opacity+transform uniquement -->
+        <div class="halo halo--cyan-tl"></div>
+        <div class="halo halo--violet-tr"></div>
+        <div class="halo halo--cyan-br"></div>
+        <div class="halo halo--violet-bl"></div>
+
+        <!-- Forme organique centrale — SVG path fidèle à la maquette -->
+        <svg class="hero-shape" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="shapeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%"   stop-color="#060B18" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#0A1020" stop-opacity="1"/>
+            </linearGradient>
+          </defs>
+          <!-- Grande forme sombre qui traverse diagonalement, comme dans la maquette -->
+          <path
+            d="M -100 520
+               C 80 480, 200 300, 420 260
+               C 640 220, 820 280, 1060 220
+               C 1200 195, 1340 180, 1540 200
+               L 1540 1000 L -100 1000 Z"
+            fill="url(#shapeGrad)"
+            class="organic-shape"
+          />
+        </svg>
+
+        <div class="hero-grid"></div>
       </div>
       <div class="hero-content">
         <p class="hero-eyebrow reveal-line" data-delay="0">Bonjour, moi c'est Morgan</p>
