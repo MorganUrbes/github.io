@@ -2,7 +2,7 @@
    PROJET DETAIL — CSS réutilisable
 ═══════════════════════════════════════════ */
 
-/* ── HERO PROJET ── */
+/* ── HERO PROJET — parallaxe natif CSS ── */
 .project-hero{
   position:relative;
   height:100svh;
@@ -10,22 +10,90 @@
   max-height:820px;
   display:flex;
   align-items:center;
-  /* clip-path au lieu de overflow:hidden pour permettre le parallaxe */
-  clip-path:inset(0);
+  overflow:hidden;
   padding-top:var(--nav-h);
   background:#080D1A;
+  /* Le parallaxe est géré via background sur le pseudo-element */
 }
-.project-hero__bg{
-  position:absolute;
-  /* Déborde pour donner de la marge au parallaxe */
-  top:-20%; left:0; right:0; bottom:-20%;
-  will-change:transform;
+
+/* BG via pseudo-element fixed — vrai parallaxe CSS natif */
+.project-hero::before{
+  content:'';
+  position:fixed;
+  inset:0;
   z-index:0;
+  background-size:cover;
+  background-position:center top;
+  background-repeat:no-repeat;
+  /* L'image est définie inline dans le HTML via style */
+  background-image:var(--hero-bg);
+  animation:heroBgReveal 4.2s cubic-bezier(0.16,1,0.3,1) both;
 }
-.project-hero__bg img{
-  width:100%;height:100%;
-  object-fit:cover;
-  object-position:center top;
+
+/* Masque le pseudo-element quand on sort du hero */
+.project-hero{
+  isolation:isolate;
+}
+
+.project-hero__bg{
+  display:none; /* plus utilisé, remplacé par ::before */
+}
+
+@keyframes heroBgReveal{
+  from{ transform:scale(1.06); opacity:0; }
+  to{   transform:scale(1);    opacity:1; }
+}
+.project-hero__overlay{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,.72) 0%,
+    rgba(0,0,0,.5) 40%,
+    rgba(0,0,0,.15) 70%,
+    transparent 100%
+  );
+  animation:fadeIn 2.4s ease both;
+}
+/* FG — glisse depuis la droite */
+.project-hero__fg{
+  position:absolute;
+  right:clamp(1.5rem,4vw,4rem);
+  top:50%;
+  transform:translateY(-50%);
+  width:clamp(180px,22vw,340px);
+  pointer-events:none;
+  z-index:2;
+  animation:heroFgReveal 3.3s cubic-bezier(0.16,1,0.3,1) .3s both;
+}
+@keyframes heroFgReveal{
+  from{ opacity:0; transform:translateY(-50%) translateX(60px); }
+  to{   opacity:1; transform:translateY(-50%) translateX(0); }
+}
+.project-hero__fg img{
+  width:100%;height:auto;
+  object-fit:contain;
+  filter:drop-shadow(0 12px 32px rgba(0,0,0,.5));
+}
+/* Contenu texte — monte depuis le bas */
+.project-hero__content{
+  position:relative;
+  z-index:3;
+  width:100%;
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 var(--pad);
+  padding-right:clamp(2rem,38vw,48%);
+  animation:heroContentReveal 3s cubic-bezier(0.16,1,0.3,1) .15s both;
+}
+@keyframes heroContentReveal{
+  from{ opacity:0; transform:translateY(30px); }
+  to{   opacity:1; transform:translateY(0); }
+}
+@keyframes fadeIn{
+  from{ opacity:0; }
+  to{   opacity:1; }
 }
 .project-hero__overlay{
   position:absolute;
@@ -243,7 +311,7 @@
   align-items:center; /* centrage vertical */
   margin-bottom:var(--s10);
 }
-.project-interventions__illus{width:240px;flex-shrink:0}
+.project-interventions__illus{width:360px;flex-shrink:0}
 .project-interventions__illus img{width:100%;height:auto}
 .project-interventions__title{font-size:var(--text-2xl);font-weight:800;color:var(--c-text-dark);letter-spacing:-.02em;margin-bottom:var(--s2)}
 .intervention-item{margin-bottom:var(--s10);padding-bottom:var(--s10);border-bottom:1px solid var(--c-border-l)}
@@ -370,20 +438,3 @@
   opacity:1;
   transform:translateY(0);
 }
-
-/* Hero animations */
-@keyframes heroBgReveal{
-  from{ transform:scale(1.08); opacity:0; }
-  to{   transform:scale(1);    opacity:1; }
-}
-@keyframes heroFgReveal{
-  from{ opacity:0; transform:translateY(-50%) translateX(60px); }
-  to{   opacity:1; transform:translateY(-50%) translateX(0); }
-}
-@keyframes heroContentReveal{
-  from{ opacity:0; transform:translateY(30px); }
-  to{   opacity:1; transform:translateY(0); }
-}
-.project-hero__bg{ animation:heroBgReveal 4.2s cubic-bezier(0.16,1,0.3,1) both; }
-.project-hero__fg{ animation:heroFgReveal 3.3s cubic-bezier(0.16,1,0.3,1) .3s both; }
-.project-hero__content{ animation:heroContentReveal 3s cubic-bezier(0.16,1,0.3,1) .15s both; }
