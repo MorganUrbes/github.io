@@ -60,19 +60,19 @@
 }
 .project-card:hover .project-card__thumb img{transform:scale(1.04)}
 
-/* Logo — SVG Figma avec fond blanc intégré */
+/* Logo — taille native SVG (162px), rendu net */
 .project-card__logo{
   position:absolute;
   top:var(--s2);left:var(--s2);
-  width:88px;height:88px;
+  width:80px;height:80px;
   background:none;border-radius:0;
   display:grid;place-items:center;
   padding:0;box-shadow:none;overflow:visible;
 }
 .project-card__logo img{
-  width:88px;height:88px;
+  width:80px;height:80px;
   object-fit:contain;display:block;
-  filter:drop-shadow(0 2px 8px rgba(0,0,0,.3));
+  image-rendering:-webkit-optimize-contrast;
 }
 
 .project-card__body{padding:var(--s5) var(--s6) var(--s6);flex:1;display:flex;flex-direction:column}
