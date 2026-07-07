@@ -17,9 +17,9 @@ function applyParallax() {
   if (heroBg && y < heroH * 1.5) {
     heroBg.style.transform = `translateY(${y * 0.3}px)`;
   }
-  // Hero FG — moves at different speed (0.15)
+  // Hero FG — subtle horizontal drift only (vertical centering kept via CSS)
   if (heroFg && y < heroH * 1.5) {
-    heroFg.style.transform = `translateY(${y * -0.1}px)`;
+    heroFg.style.transform = `translateY(calc(-50% + ${y * -0.06}px))`;
   }
   // Focus section BG — subtle parallax
   if (focusBg) {
