@@ -127,16 +127,19 @@
   line-height:1.75;
 }
 
-/* ── FOCUS BANNER — image visible ── */
+/* ── FOCUS BANNER — plus haut, image plus visible ── */
 .project-focus{
   position:relative;
   overflow:hidden;
-  padding:clamp(var(--s12),6vw,var(--s20)) 0;
+  padding:clamp(var(--s20),10vw,var(--s32)) 0;
   background:var(--c-dark);
+  min-height:320px;
+  display:flex;
+  align-items:center;
 }
 .project-focus__bg{
   position:absolute;
-  inset:0;
+  inset:-20%;
   will-change:transform;
   z-index:0;
 }
@@ -144,15 +147,20 @@
   width:100%;height:100%;
   object-fit:cover;
   object-position:center;
-  opacity:.6;
+  opacity:.45;
 }
-/* Overlay pour lisibilité du texte */
+/* Overlay léger — laisse voir l'image */
 .project-focus::after{
   content:'';
   position:absolute;
   inset:0;
   z-index:1;
-  background:linear-gradient(to right,rgba(0,0,0,.75) 0%,rgba(0,0,0,.4) 60%,rgba(0,0,0,.2) 100%);
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,.65) 0%,
+    rgba(0,0,0,.3) 50%,
+    rgba(0,0,0,.15) 100%
+  );
 }
 .project-focus__content{
   position:relative;
@@ -172,7 +180,9 @@
 .project-focus__sub{
   font-size:var(--text-xl);
   font-weight:600;
-  color:rgba(255,255,255,.7);
+  color:rgba(255,255,255,.75);
+  max-width:500px;
+}
   max-width:500px;
 }
 
