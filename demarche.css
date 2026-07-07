@@ -7,7 +7,7 @@
   position: relative;
   background: #080D1A;
   overflow: hidden;
-  padding: calc(var(--nav-h) + var(--space-16)) var(--container-pad) 0;
+  padding: calc(var(--nav-h) + var(--space-16)) 0 0;
 }
 .dm-hero-bg {
   position: absolute;
@@ -18,8 +18,18 @@
   position: relative;
   z-index: 2;
   max-width: 700px;
-  padding-bottom: var(--space-16);
+  padding: 0 var(--container-pad) var(--space-10);
+  /* Forcer la visibilité du texte — les reveal-line sont gérées par main.js */
+  opacity: 1;
 }
+
+/* Forcer le texte du hero visible immédiatement sur cette page */
+.dm-hero .reveal-line {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+}
+
 .dm-hero-title {
   font-size: clamp(var(--text-3xl), 4.5vw, var(--text-5xl));
   font-weight: 800;
@@ -36,14 +46,14 @@
   margin-bottom: 0;
 }
 
-/* Steps track dans le hero — sur fond blanc en bas */
+/* Steps track — pleine largeur, pas de marge parasite */
 .dm-steps-track {
   position: relative;
   z-index: 2;
   background: var(--c-bg-light);
   border-radius: var(--r-xl) var(--r-xl) 0 0;
-  padding: var(--space-10) var(--space-8);
-  margin: 0 calc(-1 * var(--container-pad));
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  width: 100%;
 }
 
 /* Les steps sont des liens sur cette page */
