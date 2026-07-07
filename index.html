@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="home.css" />
 </head>
 <body>
 
@@ -108,57 +109,43 @@
         <div class="problems-grid">
 
           <article class="problem-card reveal-up" data-delay="0">
-            <div class="problem-icon problem-icon--red" aria-hidden="true">
-              <span data-icon>😵</span>
-            </div>
+            <div class="problem-icon problem-icon--red" aria-hidden="true"><img src="assets/icones/HP-Utilisateur perdu.svg" alt=""/></div>
             <h3 class="problem-title">Utilisateurs perdus</h3>
             <p class="problem-desc">Vos utilisateurs ne trouvent pas ce qu'ils cherchent et quittent votre service.</p>
           </article>
 
           <article class="problem-card reveal-up" data-delay="60">
-            <div class="problem-icon problem-icon--red" aria-hidden="true">
-              <span data-icon>🔥</span>
-            </div>
+            <div class="problem-icon problem-icon--red" aria-hidden="true"><img src="assets/icones/HP-equipe débordé.svg" alt=""/></div>
             <h3 class="problem-title">Équipes débordées</h3>
             <p class="problem-desc">Des processus complexes qui font perdre du temps et de l'énergie.</p>
           </article>
 
           <article class="problem-card reveal-up" data-delay="120">
-            <div class="problem-icon problem-icon--red" aria-hidden="true">
-              <span data-icon>🤔</span>
-            </div>
+            <div class="problem-icon problem-icon--red" aria-hidden="true"><img src="assets/icones/HP-Clients désorientés.svg" alt=""/></div>
             <h3 class="problem-title">Clients désorientés</h3>
             <p class="problem-desc">Vos messages sont difficiles à comprendre, l'information est introuvable.</p>
           </article>
 
           <article class="problem-card reveal-up" data-delay="0">
-            <div class="problem-icon problem-icon--red" aria-hidden="true">
-              <span data-icon>🌀</span>
-            </div>
+            <div class="problem-icon problem-icon--red" aria-hidden="true"><img src="assets/icones/HP-Parcours compliqués.svg" alt=""/></div>
             <h3 class="problem-title">Parcours compliqués</h3>
             <p class="problem-desc">Trop d'étapes, de ruptures et de frictions dans l'expérience globale.</p>
           </article>
 
           <article class="problem-card reveal-up" data-delay="60">
-            <div class="problem-icon problem-icon--red" aria-hidden="true">
-              <span data-icon>💭</span>
-            </div>
+            <div class="problem-icon problem-icon--red" aria-hidden="true"><img src="assets/icones/HP-Idées floues.svg" alt=""/></div>
             <h3 class="problem-title">Idées/priorités floues</h3>
             <p class="problem-desc">Vous avez des idées mais ne savez pas par où commencer ni quoi prioriser.</p>
           </article>
 
           <article class="problem-card reveal-up" data-delay="120">
-            <div class="problem-icon problem-icon--red" aria-hidden="true">
-              <span data-icon>🧩</span>
-            </div>
+            <div class="problem-icon problem-icon--red" aria-hidden="true"><img src="assets/icones/HP-Manque de cohérence.svg" alt=""/></div>
             <h3 class="problem-title">Manque de cohérence</h3>
             <p class="problem-desc">Une expérience qui manque d'unité entre vos différents points de contact.</p>
           </article>
 
           <article class="problem-card problem-card--center reveal-up" data-delay="60">
-            <div class="problem-icon problem-icon--purple" aria-hidden="true">
-              <span data-icon>🎯</span>
-            </div>
+            <div class="problem-icon problem-icon--purple" aria-hidden="true"><img src="assets/icones/HP-Difficulté à se démarquer.svg" alt=""/></div>
             <h3 class="problem-title">Difficulté à se démarquer</h3>
             <p class="problem-desc">Votre offre est peu différenciante et ne répond pas assez aux attentes réelles.</p>
           </article>
@@ -213,69 +200,83 @@
       -->
       <div class="carousel-viewport" aria-label="Clients et partenaires">
         <div class="carousel-track" id="carousel-track">
-          <!-- Groupe 1 (sera dupliqué par JS) -->
-          <div class="logo-item"><span class="logo-text">DECATHLON</span></div>
-          <div class="logo-item"><span class="logo-text">BONS SAVEURS</span></div>
-          <div class="logo-item"><span class="logo-text">nexity</span></div>
-          <div class="logo-item"><span class="logo-text">LEADER PRICE</span></div>
-          <div class="logo-item"><span class="logo-text">SwissLife</span></div>
-          <div class="logo-item"><span class="logo-text">CAFPI</span></div>
+          <div class="logo-item"><img src="assets/logo entreprise/Property 1=Decathlon.svg" alt="Decathlon"/></div>
+          <div class="logo-item"><img src="assets/logo entreprise/Property 1=Nexity.svg" alt="Nexity"/></div>
+          <div class="logo-item"><img src="assets/logo entreprise/Property 1=cafpi.svg" alt="CAFPI"/></div>
+          <div class="logo-item"><img src="assets/logo entreprise/Property 1=Swisslife.svg" alt="SwissLife"/></div>
+          <div class="logo-item"><img src="assets/logo entreprise/Property 1=leader price.svg" alt="Leader Price"/></div>
+          <div class="logo-item"><img src="assets/logo entreprise/Property 1=room saveur.svg" alt="Room Saveurs"/></div>
+          <div class="logo-item"><img src="assets/logo entreprise/Property 1=Clink market.svg" alt="Cliink Market"/></div>
         </div>
       </div>
     </section>
 
     <!-- PROJETS -->
-    <section class="projects section-dark" id="projets" aria-labelledby="projects-title">
-      <div class="projects-bg" aria-hidden="true">
-        <div class="orb orb--projects"></div>
-      </div>
+    <section class="projects-home section-dark" id="projets" aria-labelledby="projects-title">
+      <div class="halo halo--accent" style="top:-200px;right:-200px" aria-hidden="true"></div>
       <div class="container">
-        <p class="section-eyebrow section-eyebrow--light reveal-up">Quelques récents projets</p>
+        <p class="eyebrow eyebrow--green reveal-up">Quelques récents projets</p>
         <h2 class="section-title section-title--light reveal-up" id="projects-title">Des projets concrets.<br>Des résultats mesurables.</h2>
-        <a href="#" class="btn btn--ghost-light reveal-up" style="margin-bottom:var(--space-12);display:inline-flex;">Voir tous mes projets</a>
-        <div class="projects-grid">
-          <article class="project-card reveal-up" data-delay="0">
-            <a href="#" class="project-card-link" aria-label="Projet Decathlon — UX Design Commerce">
-              <div class="project-thumb">
-                <div class="project-thumb-inner project-thumb--decathlon" aria-hidden="true"><span class="thumb-logo">DECATHLON</span></div>
-                <span class="project-overlay" aria-hidden="true">Voir le projet →</span>
+        <div class="section-divider reveal-up"></div>
+        <a href="projets.html" class="btn btn--outline reveal-up" style="margin-bottom:var(--s12);display:inline-flex;">Voir tous mes projets</a>
+        <div class="projects-home-grid">
+
+          <a href="projet-mindeleon.html" class="ph-card reveal-up" data-delay="0" aria-label="Mindeleon — Game Design & Product Design">
+            <div class="ph-thumb">
+              <img src="assets/Image Projectcard/Property 1=Mindeleon, size=large.png" alt="Mindeleon"/>
+            </div>
+            <div class="ph-meta">
+              <div class="ph-tag">● Game Design &nbsp;● Product Design</div>
+              <h3 class="ph-name">Mindeleon</h3>
+              <p class="ph-desc">Concevoir une expérience d'apprentissage où le jeu devient un moteur de curiosité</p>
+              <div class="ph-footer">
+                <div style="display:flex;gap:var(--s2)">
+                  <span class="tag-badge"><img src="assets/Tag label project/Property 1=Jeux de société.svg" alt="Jeux de société"/></span>
+                  <span class="tag-badge"><img src="assets/Tag label project/Property 1=Education.svg" alt="Éducation"/></span>
+                </div>
+                <span class="ph-arrow">→</span>
               </div>
-              <div class="project-meta">
-                <span class="project-tag">UX Design</span>
-                <h3 class="project-name">Application métier Decathlon</h3>
-                <p class="project-desc">Refonte complète de l'expérience collaborateur pour les équipes terrain.</p>
-                <div class="project-footer"><span class="project-category">Commerce</span><span class="project-arrow">→</span></div>
+              <div style="margin-top:var(--s4);font-size:var(--text-sm);color:var(--c-muted-light)">Accéder au détail du projet</div>
+            </div>
+          </a>
+
+          <a href="projet-icare.html" class="ph-card reveal-up" data-delay="100" aria-label="iCare — Decathlon">
+            <div class="ph-thumb">
+              <img src="assets/Image Projectcard/Property 1=Decath-Icare, size=large.png" alt="Decathlon iCare"/>
+            </div>
+            <div class="ph-meta">
+              <div class="ph-tag">● Product Design &nbsp;● UX Design &nbsp;● UI Design</div>
+              <h3 class="ph-name">iCare</h3>
+              <p class="ph-desc">Optimiser la prise en charge et la réparation des équipements Decathlon</p>
+              <div class="ph-footer">
+                <div style="display:flex;gap:var(--s2)">
+                  <span class="tag-badge"><img src="assets/Tag label project/Property 1=Retail.svg" alt="Retail"/></span>
+                  <span class="tag-badge"><img src="assets/Tag label project/Property 1=App métier.svg" alt="App métier"/></span>
+                </div>
+                <span class="ph-arrow">→</span>
               </div>
-            </a>
-          </article>
-          <article class="project-card reveal-up" data-delay="100">
-            <a href="#" class="project-card-link" aria-label="Projet Decathlon UX Research">
-              <div class="project-thumb">
-                <div class="project-thumb-inner project-thumb--decathlon2" aria-hidden="true"><span class="thumb-logo">DECATHLON</span></div>
-                <span class="project-overlay" aria-hidden="true">Voir le projet →</span>
+              <div style="margin-top:var(--s4);font-size:var(--text-sm);color:var(--c-muted-light)">Accéder au détail du projet</div>
+            </div>
+          </a>
+
+          <a href="projet-kaz-renov.html" class="ph-card reveal-up" data-delay="200" aria-label="Kaz Renov — Rebranding">
+            <div class="ph-thumb">
+              <img src="assets/Image Projectcard/Property 1=Kaz renov, size=large.png" alt="Kaz Renov"/>
+            </div>
+            <div class="ph-meta">
+              <div class="ph-tag">● Rebranding</div>
+              <h3 class="ph-name">Kaz Renov</h3>
+              <p class="ph-desc">Conception d'une proposition d'identité visuelle et d'une charte graphique</p>
+              <div class="ph-footer">
+                <div style="display:flex;gap:var(--s2)">
+                  <span class="tag-badge"><img src="assets/Tag label project/Property 1=BTP.svg" alt="BTP"/></span>
+                </div>
+                <span class="ph-arrow">→</span>
               </div>
-              <div class="project-meta">
-                <span class="project-tag">UX Research</span>
-                <h3 class="project-name">Research utilisateur Decathlon</h3>
-                <p class="project-desc">Étude terrain et cartographie des parcours utilisateurs en point de vente.</p>
-                <div class="project-footer"><span class="project-category">Commerce</span><span class="project-arrow">→</span></div>
-              </div>
-            </a>
-          </article>
-          <article class="project-card reveal-up" data-delay="200">
-            <a href="#" class="project-card-link" aria-label="Projet SwissLife — Service Design">
-              <div class="project-thumb">
-                <div class="project-thumb-inner project-thumb--swisslife" aria-hidden="true"><span class="thumb-logo">SwissLife</span></div>
-                <span class="project-overlay" aria-hidden="true">Voir le projet →</span>
-              </div>
-              <div class="project-meta">
-                <span class="project-tag">Service Design</span>
-                <h3 class="project-name">Parcours digital SwissLife</h3>
-                <p class="project-desc">Simplification du parcours de souscription pour les conseillers et clients.</p>
-                <div class="project-footer"><span class="project-category">Finance</span><span class="project-arrow">→</span></div>
-              </div>
-            </a>
-          </article>
+              <div style="margin-top:var(--s4);font-size:var(--text-sm);color:var(--c-muted-light)">Accéder au détail du projet</div>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
