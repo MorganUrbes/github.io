@@ -8,7 +8,6 @@ const fill = document.createElement('div');
 fill.style.cssText = 'height:100%;background:linear-gradient(90deg,#6C4BF6,#8B6EF8);width:0%;transition:width 80ms linear';
 bar.appendChild(fill);
 document.body.prepend(bar);
-
 window.addEventListener('scroll', () => {
   const tot = document.documentElement.scrollHeight - window.innerHeight;
   fill.style.width = (tot > 0 ? (scrollY / tot) * 100 : 0) + '%';
@@ -16,100 +15,95 @@ window.addEventListener('scroll', () => {
 
 if (!PRM) {
 
-// ── Parallaxe hero BG + FG ───────────────────
+// ── Éléments ─────────────────────────────────
 const heroBg  = document.querySelector('.project-hero__bg');
 const heroFg  = document.querySelector('.project-hero__fg');
 const heroEl  = document.querySelector('.project-hero');
-
-// ── Parallaxe focus BG ───────────────────────
 const focusBg = document.querySelector('.project-focus__bg');
 const focusEl = document.querySelector('.project-focus');
 
-// ── Reveal au scroll ────────────────────────
-// Éléments à animer à l'entrée dans la vue
-const revealEls = document.querySelectorAll(
-  '.project-context__block, .enjeu-card, .intervention-item, .intervention-with-visual, .intervention-visual, .intervention-visual--full, .project-gallery__item'
-);
+// ── Reveals au scroll ────────────────────────
+function initReveals() {
+  const cards = document.querySelectorAll('.enjeu-card, .intervention-item, .project-gallery__item');
+  const blocks = document.querySelectorAll('.project-context__block, .project-enjeux__header, .project-interventions__header');
 
-const revealObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const delay = parseInt(el.dataset.revealDelay || '0', 10);
+  const obsCards = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const d = parseInt(e.target.dataset.rd || '0');
       setTimeout(() => {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }, delay);
-      revealObs.unobserve(el);
-    }
+        e.target.classList.add('rd-visible');
+      }, d);
+      obsCards.unobserve(e.target);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  const obsBlocks = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add('rd-visible');
+      obsBlocks.unobserve(e.target);
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  // Stagger enjeux cards
+  document.querySelectorAll('.enjeu-card').forEach((el, i) => {
+    el.dataset.rd = String((i % 3) * 90);
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-revealEls.forEach((el, i) => {
-  // Init invisible
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.55s cubic-bezier(0.16,1,0.3,1), transform 0.55s cubic-bezier(0.16,1,0.3,1)';
-  // Stagger pour les cards enjeux (groupes de 3)
-  if (el.classList.contains('enjeu-card')) {
-    el.dataset.revealDelay = String((i % 3) * 80);
-  }
-  revealObs.observe(el);
-});
-
-// ── Headers de sections ──────────────────────
-const sectionHeaders = document.querySelectorAll(
-  '.project-enjeux__header, .project-interventions__header, .project-context__grid'
-);
-const headerObs = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      headerObs.unobserve(entry.target);
-    }
+  cards.forEach(el => {
+    el.classList.add('rd-init');
+    obsCards.observe(el);
   });
-}, { threshold: 0.08 });
+  blocks.forEach(el => {
+    el.classList.add('rd-init', 'rd-up');
+    obsBlocks.observe(el);
+  });
+}
+initReveals();
 
-sectionHeaders.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(32px)';
-  el.style.transition = 'opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1)';
-  headerObs.observe(el);
-});
-
-// ── RAF loop pour parallaxe ──────────────────
+// ── RAF parallaxe ────────────────────────────
 let raf = null;
 
-function onScroll() {
-  if (!raf) {
-    raf = requestAnimationFrame(() => {
-      const y = scrollY;
+function applyParallax() {
+  const y = scrollY;
 
-      // Hero parallaxe — BG plus lent, FG légèrement différent
-      if (heroEl) {
-        const heroH = heroEl.offsetHeight;
-        if (y < heroH * 1.5) {
-          if (heroBg) heroBg.style.transform = `translateY(${y * 0.28}px)`;
-          if (heroFg) heroFg.style.transform = `translateY(calc(-50% + ${y * -0.08}px))`;
-        }
-      }
-
-      // Focus parallaxe — BG se déplace légèrement
-      if (focusEl && focusBg) {
-        const rect = focusEl.getBoundingClientRect();
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
-          focusBg.style.transform = `translateY(${(progress - 0.5) * -60}px)`;
-        }
-      }
-
-      raf = null;
-    });
+  // Hero BG — se déplace plus lentement que le scroll
+  if (heroEl && heroBg) {
+    const heroH = heroEl.offsetHeight;
+    if (y < heroH * 1.5) {
+      heroBg.style.transform = `translateY(${y * 0.3}px)`;
+    }
   }
+
+  // Hero FG — centré via CSS top:50%, on ajuste via margin-top
+  // On utilise une CSS var pour ne pas écraser le centrage
+  if (heroEl && heroFg) {
+    const heroH = heroEl.offsetHeight;
+    if (y < heroH * 1.5) {
+      // Utilise marginTop pour le parallaxe sans toucher au transform du centrage
+      heroFg.style.marginTop = `${y * -0.08}px`;
+    }
+  }
+
+  // Focus BG — parallaxe basé sur la position relative dans la vue
+  if (focusEl && focusBg) {
+    const rect = focusEl.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const progress = (window.innerHeight * 0.5 - rect.top) / rect.height;
+      const shift = progress * 80; // max 80px de déplacement
+      focusBg.style.transform = `translateY(${shift}px)`;
+    }
+  }
+
+  raf = null;
 }
 
-window.addEventListener('scroll', onScroll, { passive: true });
-onScroll();
+window.addEventListener('scroll', () => {
+  if (!raf) raf = requestAnimationFrame(applyParallax);
+}, { passive: true });
+
+// Lancer une première fois
+applyParallax();
 
 } // end if !PRM
