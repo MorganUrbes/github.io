@@ -60,22 +60,23 @@
 }
 .project-card:hover .project-card__thumb img{transform:scale(1.04)}
 
-/* Logo — blanc arrondi comme la maquette */
+/* Logo — le SVG Figma inclut déjà son propre fond blanc arrondi */
 .project-card__logo{
   position:absolute;
-  top:var(--s3);left:var(--s3);
-  width:56px;height:56px;
-  background:#fff;
-  border-radius:12px;
+  top:var(--s2);left:var(--s2);
+  width:72px;height:72px;
+  background:none;
+  border-radius:0;
   display:grid;place-items:center;
-  padding:8px;
-  box-shadow:0 2px 12px rgba(0,0,0,.18);
-  overflow:hidden;
+  padding:0;
+  box-shadow:none;
+  overflow:visible;
 }
 .project-card__logo img{
-  width:100%;height:100%;
+  width:72px;height:72px;
   object-fit:contain;
   display:block;
+  filter:drop-shadow(0 2px 8px rgba(0,0,0,.3));
 }
 
 .project-card__body{padding:var(--s5) var(--s6) var(--s6);flex:1;display:flex;flex-direction:column}
