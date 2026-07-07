@@ -31,10 +31,10 @@
 .problem-card{padding:var(--s6);background:var(--c-light);border:1px solid var(--c-border-l);border-radius:var(--r-lg);transition:transform var(--dur-base) var(--ease-out),box-shadow var(--dur-base),border-color var(--dur-base)}
 .problem-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:rgba(108,75,246,.15)}
 .problem-card--center{grid-column:2}
-.problem-icon{width:40px;height:40px;border-radius:var(--r-md);display:grid;place-items:center;margin-bottom:var(--s4);font-size:20px}
-.problem-icon--red{background:rgba(232,57,42,.1)}
-.problem-icon--purple{background:rgba(108,75,246,.12)}
-.problem-icon img{width:28px;height:28px;object-fit:contain}
+.problem-icon{width:44px;height:44px;margin-bottom:var(--s4);display:flex;align-items:center}
+.problem-icon--red{}
+.problem-icon--purple{}
+.problem-icon img{width:44px;height:44px;object-fit:contain;display:block}
 .problem-title{font-size:var(--text-base);font-weight:700;color:var(--c-text-dark);margin-bottom:var(--s2);letter-spacing:-.01em}
 .problem-desc{font-size:var(--text-sm);color:var(--c-muted);line-height:1.6}
 .problems-footer{font-size:var(--text-base);color:var(--c-muted);text-align:center;max-width:640px;margin:0 auto;line-height:1.75}
