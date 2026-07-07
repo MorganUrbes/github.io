@@ -370,3 +370,20 @@
   opacity:1;
   transform:translateY(0);
 }
+
+/* Hero animations */
+@keyframes heroBgReveal{
+  from{ transform:scale(1.08); opacity:0; }
+  to{   transform:scale(1);    opacity:1; }
+}
+@keyframes heroFgReveal{
+  from{ opacity:0; transform:translateY(-50%) translateX(60px); }
+  to{   opacity:1; transform:translateY(-50%) translateX(0); }
+}
+@keyframes heroContentReveal{
+  from{ opacity:0; transform:translateY(30px); }
+  to{   opacity:1; transform:translateY(0); }
+}
+.project-hero__bg{ animation:heroBgReveal 1.4s cubic-bezier(0.16,1,0.3,1) both; }
+.project-hero__fg{ animation:heroFgReveal 1.1s cubic-bezier(0.16,1,0.3,1) .3s both; }
+.project-hero__content{ animation:heroContentReveal 1s cubic-bezier(0.16,1,0.3,1) .15s both; }
