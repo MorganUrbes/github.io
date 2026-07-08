@@ -251,7 +251,7 @@
   width:260px;
   flex-shrink:0;
 }
-.project-enjeux__illus img{width:100%;height:auto;mix-blend-mode:multiply}
+.project-enjeux__illus img{width:100%;height:auto;mix-blend-mode:darken}
 .project-enjeux__title{
   font-size:var(--text-2xl);
   font-weight:800;
@@ -296,7 +296,7 @@
   margin-bottom:var(--s10);
 }
 .project-interventions__illus{width:360px;flex-shrink:0}
-.project-interventions__illus img{mix-blend-mode:multiply}
+.project-interventions__illus img{mix-blend-mode:darken}
 .project-interventions__illus img{width:100%;height:auto}
 .project-interventions__title{font-size:var(--text-2xl);font-weight:800;color:var(--c-text-dark);letter-spacing:-.02em;margin-bottom:var(--s2)}
 .intervention-item{margin-bottom:var(--s10);padding-bottom:var(--s10);border-bottom:1px solid var(--c-border-l)}
