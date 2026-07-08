@@ -13,30 +13,20 @@
   overflow:hidden;
   padding-top:var(--nav-h);
   background:#080D1A;
-  /* Le parallaxe est géré via background sur le pseudo-element */
 }
 
-/* BG via pseudo-element fixed — vrai parallaxe CSS natif */
-.project-hero::before{
-  content:'';
-  position:fixed;
-  inset:0;
+/* BG via img — position sticky pour parallaxe */
+.project-hero__bg{
+  position:absolute;
+  inset:-30% 0;
   z-index:0;
-  background-size:cover;
-  background-position:center top;
-  background-repeat:no-repeat;
-  /* L'image est définie inline dans le HTML via style */
-  background-image:var(--hero-bg);
+  will-change:transform;
   animation:heroBgReveal 4.2s cubic-bezier(0.16,1,0.3,1) both;
 }
-
-/* Masque le pseudo-element quand on sort du hero */
-.project-hero{
-  isolation:isolate;
-}
-
-.project-hero__bg{
-  display:none; /* plus utilisé, remplacé par ::before */
+.project-hero__bg img{
+  width:100%;height:100%;
+  object-fit:cover;
+  object-position:center top;
 }
 
 @keyframes heroBgReveal{
