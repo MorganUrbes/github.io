@@ -71,6 +71,7 @@
   object-fit:contain;
   object-position:center;
   display:block;
+  border-radius:16px;
   filter:drop-shadow(0 12px 40px rgba(0,0,0,.55));
 }
 /* Contenu texte — monte depuis le bas */
