@@ -41,28 +41,37 @@
   animation:fadeIn 2.4s ease both;
 }
 /* FG — glisse depuis la droite */
+/* FG hero — taille uniforme, animation glisse droite→gauche */
 .project-hero__fg{
   position:absolute;
   right:clamp(1rem,3vw,3rem);
-  top:50%;
-  transform:translateY(-50%);
-  width:clamp(300px,42vw,580px);
+  /* Centrage vertical sans transform pour éviter conflit avec l'animation */
+  top:0; bottom:0;
+  margin:auto 0;
+  height:fit-content;
+  width:clamp(340px,42vw,560px);
   pointer-events:none;
   z-index:2;
-  animation:heroFgReveal 3.3s cubic-bezier(0.16,1,0.3,1) .3s both;
+  /* Animation : glisse de droite à gauche + fade */
+  opacity:0;
+  transform:translateX(50px);
+  animation:heroFgReveal 1.2s cubic-bezier(0.16,1,0.3,1) .4s forwards;
 }
 /* Taille réduite pour LP, KazRenov, Mindeleon */
 .project-hero__fg--small{
-  width:clamp(180px,22vw,340px) !important;
+  width:clamp(200px,24vw,360px) !important;
 }
 @keyframes heroFgReveal{
-  from{ opacity:0; transform:translateY(-50%) translateX(60px); }
-  to{   opacity:1; transform:translateY(-50%) translateX(0); }
+  from{ opacity:0; transform:translateX(50px); }
+  to{   opacity:1; transform:translateX(0); }
 }
 .project-hero__fg img{
   width:100%;height:auto;
+  max-height:80vh;
   object-fit:contain;
-  filter:drop-shadow(0 12px 32px rgba(0,0,0,.5));
+  object-position:center;
+  display:block;
+  filter:drop-shadow(0 12px 40px rgba(0,0,0,.55));
 }
 /* Contenu texte — monte depuis le bas */
 .project-hero__content{
