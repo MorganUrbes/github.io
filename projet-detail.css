@@ -95,16 +95,6 @@
     transparent 100%
   );
 }
-.project-hero__fg{
-  position:absolute;
-  right:clamp(1.5rem,4vw,4rem);
-  top:50%;
-  transform:translateY(-50%);
-  width:clamp(180px,22vw,340px);
-  pointer-events:none;
-  z-index:2;
-  will-change:transform;
-}
 .project-hero__fg img{
   width:100%;height:auto;
   object-fit:contain;
