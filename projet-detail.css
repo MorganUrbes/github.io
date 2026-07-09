@@ -43,13 +43,17 @@
 /* FG — glisse depuis la droite */
 .project-hero__fg{
   position:absolute;
-  right:clamp(1.5rem,4vw,4rem);
+  right:clamp(1rem,3vw,3rem);
   top:50%;
   transform:translateY(-50%);
-  width:clamp(180px,22vw,340px);
+  width:clamp(300px,42vw,580px);
   pointer-events:none;
   z-index:2;
   animation:heroFgReveal 3.3s cubic-bezier(0.16,1,0.3,1) .3s both;
+}
+/* Taille réduite pour LP, KazRenov, Mindeleon */
+.project-hero__fg--small{
+  width:clamp(180px,22vw,340px) !important;
 }
 @keyframes heroFgReveal{
   from{ opacity:0; transform:translateY(-50%) translateX(60px); }
