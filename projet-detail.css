@@ -10,7 +10,7 @@
   max-height:820px;
   display:flex;
   align-items:center;
-  overflow:hidden;
+  clip-path:inset(0 0 0 0);
   padding-top:var(--nav-h);
   background-color:#080D1A;
   background-image:var(--hero-bg);
@@ -19,7 +19,6 @@
   background-attachment:fixed;
   animation:heroBgReveal 4.2s cubic-bezier(0.16,1,0.3,1) both;
 }
-/* img caché — utilisé comme fallback uniquement */
 .project-hero__bg{ display:none; }
 
 @keyframes heroBgReveal{
