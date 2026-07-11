@@ -2,7 +2,7 @@
    PROJET DETAIL — CSS réutilisable
 ═══════════════════════════════════════════ */
 
-/* ── HERO PROJET — parallaxe via background-attachment:fixed ── */
+/* ── HERO PROJET ── */
 .project-hero{
   position:relative;
   height:100svh;
@@ -13,16 +13,20 @@
   overflow:hidden;
   padding-top:var(--nav-h);
   background-color:#080D1A;
-  /* background-image défini inline via style="--hero-bg:url(...)" */
-  background-image:var(--hero-bg);
-  background-size:cover;
-  background-position:center top;
-  background-attachment:fixed;
   animation:heroBgReveal 4.2s cubic-bezier(0.16,1,0.3,1) both;
 }
-/* Cache l'img tag — on utilise background-image CSS */
-.project-hero__bg{ display:none; }
-
+/* BG via img tag */
+.project-hero__bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+}
+.project-hero__bg img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center top;
+}
 @keyframes heroBgReveal{
   from{ opacity:0; }
   to{   opacity:1; }
