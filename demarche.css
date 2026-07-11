@@ -50,8 +50,7 @@
 .dm-steps-track {
   position: relative;
   z-index: 2;
-  background: var(--c-light);
-  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  background: transparent;
   padding: var(--s8) var(--s6) var(--s6);
   width: 100%;
 }
@@ -65,7 +64,8 @@
 .step:hover .step-number{transform:scale(1.1);box-shadow:0 0 0 8px rgba(108,75,246,.18),var(--glow)}
 .step-label{font-size:var(--text-sm);font-weight:600;color:rgba(250,250,248,.7);letter-spacing:.01em}
 
-/* Les steps sont des liens sur cette page */
+/* Les steps sont des liens sur cette page — fond du hero étant sombre,
+   les labels restent blancs (pas de pilule blanche derrière) */
 .dm-step-link {
   text-decoration: none;
   transition: transform var(--dur-base) var(--ease-out);
@@ -75,14 +75,14 @@
   box-shadow: 0 0 0 8px rgba(108,75,246,0.18), 0 0 40px rgba(108,75,246,0.25);
 }
 .dm-step-link .step-label {
-  color: var(--c-muted);
+  color: var(--c-text-light);
   transition: color var(--dur-fast);
 }
-.dm-step-link:hover .step-label { color: var(--c-text-dark); }
+.dm-step-link:hover .step-label { color: var(--c-accent-h); }
 .dm-step-link.dm-step-active .step-number {
   box-shadow: 0 0 0 8px rgba(108,75,246,0.2), 0 0 40px rgba(108,75,246,0.2);
 }
-.dm-step-link.dm-step-active .step-label { color: var(--c-accent); }
+.dm-step-link.dm-step-active .step-label { color: var(--c-accent-h); }
 
 
 /* ── STEP SECTIONS ── */
@@ -188,12 +188,12 @@
   transform: translateY(-2px);
 }
 .dm-item--light {
-  background: var(--c-light);
-  border-color: var(--c-border-l);
+  background: rgba(255,255,255,0.05);
+  border-color: var(--c-border-d);
 }
 .dm-item--light:hover {
-  background: var(--c-light-2);
-  border-color: rgba(108,75,246,0.25);
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(108,75,246,0.3);
 }
 .dm-item-title {
   font-size: var(--text-sm);
@@ -203,12 +203,16 @@
   letter-spacing: -0.01em;
 }
 .dm-item-title--dark { color: var(--c-text-dark); }
+.dm-item--light .dm-item-title,
+.dm-item--light .dm-item-title--dark { color: var(--c-text-light); }
 .dm-item-desc {
   font-size: var(--text-xs);
   color: var(--c-muted);
   line-height: 1.55;
 }
 .dm-item-desc--dark { color: var(--c-muted); }
+.dm-item--light .dm-item-desc,
+.dm-item--light .dm-item-desc--dark { color: rgba(250,250,248,0.55); }
 
 /* Liste des livrables */
 .dm-deliverables {
@@ -232,16 +236,16 @@
   transform: translateX(4px);
 }
 .dm-deliverable--light {
-  background: var(--c-light);
-  border-color: var(--c-border-l);
+  background: rgba(255,255,255,0.05);
+  border-color: var(--c-border-d);
 }
 .dm-deliverable--light:hover {
-  background: var(--c-light-2);
-  border-color: rgba(108,75,246,0.25);
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(108,75,246,0.3);
 }
 .dm-deliverable-icon {
-  width: 28px;
-  height: 28px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
   margin-top: 2px;
   object-fit: contain;
@@ -258,12 +262,16 @@
   flex-wrap: wrap;
 }
 .dm-deliverable-title--dark { color: var(--c-text-dark); }
+.dm-deliverable--light .dm-deliverable-title,
+.dm-deliverable--light .dm-deliverable-title--dark { color: var(--c-text-light); }
 .dm-deliverable-desc {
   font-size: var(--text-xs);
   color: var(--c-muted);
   line-height: 1.55;
 }
 .dm-deliverable-desc--dark { color: var(--c-muted); }
+.dm-deliverable--light .dm-deliverable-desc,
+.dm-deliverable--light .dm-deliverable-desc--dark { color: rgba(250,250,248,0.55); }
 
 /* Badge "si pertinent" */
 .dm-tag-optional {
@@ -276,6 +284,11 @@
   font-style: italic;
   letter-spacing: 0;
 }
+.dm-deliverable--light .dm-tag-optional {
+  color: rgba(250,250,248,0.45);
+  background: rgba(255,255,255,0.08);
+}
+
 
 
 /* ── CTA FINAL ── */
