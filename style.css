@@ -160,9 +160,9 @@ section{padding:clamp(var(--s16),8vw,var(--s32)) 0}
 @keyframes revealLine{to{opacity:1;transform:translateY(0)}}
 
 /* ── INFO BANNER ── */
-.info-banner{background:rgba(79,159,255,.08);border:1px solid rgba(79,159,255,.25);border-radius:var(--r-md);padding:var(--s4) var(--s5);display:flex;align-items:flex-start;gap:var(--s3);margin-bottom:var(--s8)}
-.info-banner-icon{font-size:var(--text-lg);flex-shrink:0;margin-top:2px}
-.info-banner p{font-size:var(--text-sm);color:rgba(79,159,255,.9);line-height:1.6;font-weight:500}
+.info-banner{background:rgba(31,42,68,.06);border:1px solid rgba(31,42,68,.15);border-radius:var(--r-md);padding:var(--s4) var(--s5);display:flex;align-items:center;gap:var(--s3);margin-bottom:var(--s8)}
+.info-banner-icon{width:24px;height:24px;flex-shrink:0}
+.info-banner p{font-size:var(--text-sm);color:#1F2A44;line-height:1.6;font-weight:700}
 
 /* ── TAG BADGES ── */
 .tag-badge{display:inline-flex;align-items:center;height:28px}
