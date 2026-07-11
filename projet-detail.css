@@ -15,7 +15,6 @@
   background-color:#080D1A;
   animation:heroBgReveal 4.2s cubic-bezier(0.16,1,0.3,1) both;
 }
-/* BG via img tag */
 .project-hero__bg{
   position:absolute;
   inset:0;
@@ -26,6 +25,7 @@
   height:100%;
   object-fit:cover;
   object-position:center top;
+  display:block;
 }
 @keyframes heroBgReveal{
   from{ opacity:0; }
