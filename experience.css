@@ -1,0 +1,53 @@
+/* ═══════════════════════════════════════════
+   EXPERIENCE.CSS — Page Expériences
+═══════════════════════════════════════════ */
+
+.experience-section{background:var(--c-light);padding:var(--s16) 0 var(--s20)}
+.experience-timeline{display:flex;flex-direction:column}
+
+.experience-item{
+  padding:var(--s10) 0;
+  border-bottom:1px solid var(--c-border-l);
+  display:flex;
+  gap:var(--s6);
+}
+.experience-item:first-child{padding-top:0}
+.experience-item:last-child{border-bottom:none}
+
+.experience-item__logo{
+  width:64px;height:64px;flex-shrink:0;
+  border-radius:var(--r-lg);overflow:hidden;
+  box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+.experience-item__logo img{width:100%;height:100%;object-fit:cover;display:block}
+
+.experience-item__main{flex:1;min-width:0}
+
+.experience-item__header{
+  display:flex;align-items:flex-start;justify-content:space-between;
+  gap:var(--s4);flex-wrap:wrap;margin-bottom:var(--s3);
+}
+.experience-item__title{font-size:var(--text-xl);font-weight:800;color:var(--c-text-dark);letter-spacing:-.02em}
+.experience-item__role{font-size:var(--text-xs);font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--c-muted);margin-top:2px}
+.experience-item__clients{font-size:var(--text-sm);color:var(--c-muted);font-style:italic;margin-top:var(--s1)}
+.experience-item__clients strong{font-style:normal;font-weight:600;color:var(--c-text-dark)}
+
+.experience-item__when{text-align:right;flex-shrink:0}
+.experience-item__date{font-size:var(--text-sm);font-weight:800;color:var(--c-text-dark)}
+.experience-item__duration{font-size:var(--text-xs);color:var(--c-muted);font-weight:600}
+
+.experience-item__intro{font-size:var(--text-sm);color:var(--c-muted);line-height:1.7;margin-bottom:var(--s5);max-width:70ch}
+
+.experience-categories{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+  gap:var(--s6) var(--s8);
+}
+.experience-category__title{font-size:var(--text-xs);font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--c-green);margin-bottom:var(--s2)}
+.experience-category .intervention-list{margin:0}
+
+@media(max-width:640px){
+  .experience-item{flex-direction:column;gap:var(--s4)}
+  .experience-item__when{text-align:left}
+  .experience-categories{grid-template-columns:1fr}
+}
