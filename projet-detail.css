@@ -340,7 +340,7 @@
   margin-top:var(--s6);
 }
 .intervention-visual{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--c-border-l)}
-.intervention-visual img{width:100%;height:auto;display:block;object-fit:contain}
+.intervention-visual img{width:100%;height:auto;max-height:900px;display:block;object-fit:contain}
 .intervention-visual-caption{font-size:var(--text-xs);color:var(--c-muted);padding:var(--s2) var(--s4);background:var(--c-light-2);display:flex;align-items:center;gap:var(--s2)}
 .intervention-visual-caption::before{content:'📷';font-size:12px}
 /* Visuel seul (pleine largeur) */
