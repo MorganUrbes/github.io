@@ -83,7 +83,15 @@ steps.forEach((s,i)=>{s.addEventListener('mouseenter',()=>{if(!stepsLine)return;
     document.body.appendChild(modal);
     const frame=modal.querySelector('.cv-modal-frame');
     const loader=modal.querySelector('.cv-modal-loader');
-    frame.addEventListener('load',()=>{frame.classList.add('loaded');loader.hidden=true});
+    const loaderText=modal.querySelector('.cv-modal-loader-text');
+    const longWaitTimer=setTimeout(()=>{
+      loaderText.classList.add('fading');
+      setTimeout(()=>{
+        loaderText.textContent='Cela peut prendre près d\u2019une minute…';
+        loaderText.classList.remove('fading');
+      },250);
+    },5000);
+    frame.addEventListener('load',()=>{clearTimeout(longWaitTimer);frame.classList.add('loaded');loader.hidden=true});
     modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
     modal.querySelector('.cv-modal-close').addEventListener('click',closeModal);
     document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
