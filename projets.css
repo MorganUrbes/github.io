@@ -64,7 +64,7 @@
 .project-card__logo{
   position:absolute;
   top:calc(var(--s3) + 32px);left:calc(var(--s3) + 32px);
-  width:32px;height:32px;
+  width:56px;height:56px;
   background:#fff;
   border-radius:12px;
   display:grid;place-items:center;
