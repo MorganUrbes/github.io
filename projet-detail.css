@@ -2,7 +2,7 @@
    PROJET DETAIL — CSS réutilisable
 ═══════════════════════════════════════════ */
 
-/* ── HERO PROJET — parallaxe via background-attachment:fixed ── */
+/* ── HERO PROJET — parallaxe pilotée en JS (voir main.js), fonctionne aussi sur mobile ── */
 .project-hero{
   position:relative;
   height:100svh;
@@ -16,7 +16,6 @@
   background-image:var(--hero-bg);
   background-size:cover;
   background-position:center top;
-  background-attachment:fixed;
   animation:heroBgReveal 4.2s cubic-bezier(0.16,1,0.3,1) both;
 }
 .project-hero__bg{ display:none; }
@@ -192,7 +191,6 @@
   background-image:url('/github.io/assets/BG/Background_FocusProject.jpg');
   background-size:cover;
   background-position:center;
-  background-attachment:fixed; /* parallaxe natif CSS */
 }
 .project-focus__bg{display:none}
 .project-focus::before{
@@ -411,13 +409,8 @@
 }
 @media(max-width:600px){
   .project-hero{height:auto;min-height:100svh;padding-bottom:var(--s12)}
-  .project-hero__fg{position:relative;right:auto;bottom:auto;width:100%;margin-top:var(--s6);order:1}
+  .project-hero__fg{display:none}
   .project-hero__content{padding-right:var(--pad);order:0}
-}
-
-@media(max-width:768px){
-  .project-hero{background-attachment:scroll}
-  .project-focus{background-attachment:scroll}
 }
 
 /* ── SCROLL REVEALS ── */

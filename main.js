@@ -30,6 +30,25 @@ initReveal();
 function initCarousel(){const t=document.getElementById('carousel-track');if(!t)return;t.innerHTML=t.innerHTML+t.innerHTML;if(PRM)t.style.animationPlayState='paused'}
 initCarousel();
 
+// ── Parallax hero + focus (JS, fonctionne aussi sur mobile) ──
+(function(){
+  if(PRM)return;
+  const els=document.querySelectorAll('.project-hero,.project-focus');
+  if(!els.length)return;
+  const speed=.35;
+  let raf=false;
+  function update(){
+    els.forEach(el=>{
+      const r=el.getBoundingClientRect();
+      if(r.bottom<0||r.top>innerHeight)return;
+      el.style.backgroundPosition=`center ${Math.round(r.top*-speed)}px`;
+    });
+    raf=false;
+  }
+  window.addEventListener('scroll',()=>{if(!raf){requestAnimationFrame(update);raf=true}},{passive:true});
+  update();
+})();
+
 // ── Smooth scroll ────────────────────────────
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const id=a.getAttribute('href').slice(1);if(!id)return;const t=document.getElementById(id);if(!t)return;e.preventDefault();const h=parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h'),10)||64;window.scrollTo({top:t.getBoundingClientRect().top+scrollY-h,behavior:PRM?'instant':'smooth'})})});
 
