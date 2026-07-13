@@ -188,7 +188,7 @@
   padding:clamp(var(--s20),10vw,var(--s32)) 0;
   min-height:360px;
   /* Image directement en CSS — plus fiable */
-  background-image:url('/github.io/assets/BG/Background_FocusProject.jpg');
+  background-image:url('/github.io/assets/BG/Background_FocusProject.webp');
   background-size:cover;
   background-position:center;
 }
