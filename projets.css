@@ -63,12 +63,12 @@
 /* Logo — blanc arrondi comme la maquette */
 .project-card__logo{
   position:absolute;
-  top:calc(var(--s3) + 32px);left:calc(var(--s3) + 32px);
-  width:56px;height:56px;
+  top:calc(var(--s3) + 24px);left:calc(var(--s3) + 24px);
+  width:64px;height:64px;
   background:#fff;
   border-radius:12px;
   display:grid;place-items:center;
-  padding:8px;
+  padding:2px;
   box-shadow:0 2px 12px rgba(0,0,0,.18);
   overflow:hidden;
 }
@@ -76,7 +76,7 @@
   width:100%;height:100%;
   object-fit:contain;
   display:block;
-  transform:scale(1.4);
+  transform:scale(1.15);
 }
 
 .project-card__body{padding:var(--s5) var(--s6) var(--s6);flex:1;display:flex;flex-direction:column}
