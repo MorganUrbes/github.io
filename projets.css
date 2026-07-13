@@ -86,6 +86,8 @@
 .project-tag--pink{color:#E040FB}
 .project-tag--orange{color:#FF9800}
 .project-tag--red{color:var(--c-red)}
+.project-tag--purple{color:#9C27B0}
+.project-tag--teal{color:#00BCD4}
 .project-card__title{font-size:var(--text-base);font-weight:800;color:var(--c-text-dark);letter-spacing:-.02em;margin-bottom:var(--s2);line-height:1.25}
 .project-card__desc{font-size:var(--text-sm);color:var(--c-muted);line-height:1.6;font-style:italic;margin-bottom:var(--s4);flex:1}
 .project-card__device-tags{display:flex;gap:var(--s2);flex-wrap:wrap;margin-bottom:var(--s4)}
