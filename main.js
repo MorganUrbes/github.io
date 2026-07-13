@@ -62,6 +62,17 @@ steps.forEach((s,i)=>{s.addEventListener('mouseenter',()=>{if(!stepsLine)return;
   if(!triggers.length)return;
   const pdfUrl=triggers[0].getAttribute('href');
   let modal;
+  let prefetched=false;
+  function prefetchPdf(){
+    if(prefetched)return;
+    prefetched=true;
+    fetch(pdfUrl,{cache:'force-cache'}).catch(()=>{prefetched=false});
+  }
+  triggers.forEach(t=>{
+    t.addEventListener('mouseenter',prefetchPdf,{once:true});
+    t.addEventListener('touchstart',prefetchPdf,{once:true,passive:true});
+    t.addEventListener('focus',prefetchPdf,{once:true});
+  });
   function buildModal(){
     modal=document.createElement('div');
     modal.className='cv-modal-overlay';
