@@ -65,13 +65,13 @@
   position:absolute;
   top:var(--s2);left:var(--s2);
   width:80px;height:80px;
-  background:none;border-radius:0;
+  background:none;border-radius:8px;
   display:grid;place-items:center;
-  padding:0;box-shadow:none;overflow:visible;
+  padding:0;box-shadow:none;overflow:hidden;
 }
 .project-card__logo img{
-  width:80px;height:80px;
-  object-fit:cover;border-radius:8px;display:block;
+  width:130%;height:130%;
+  object-fit:cover;display:block;
   image-rendering:-webkit-optimize-contrast;
 }
 
