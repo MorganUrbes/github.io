@@ -68,7 +68,7 @@
   background:#fff;
   border-radius:12px;
   display:grid;place-items:center;
-  padding:2px;
+  padding:0;
   box-shadow:0 2px 12px rgba(0,0,0,.18);
   overflow:hidden;
 }
@@ -76,7 +76,6 @@
   width:100%;height:100%;
   object-fit:contain;
   display:block;
-  transform:scale(1.15);
 }
 
 .project-card__body{padding:var(--s5) var(--s6) var(--s6);flex:1;display:flex;flex-direction:column}

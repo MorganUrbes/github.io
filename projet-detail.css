@@ -402,8 +402,8 @@
   .project-interventions__illus{display:none}
   .intervention-grid{grid-template-columns:1fr}
   .intervention-with-visual{grid-template-columns:1fr}
-  .intervention-with-visual .intervention-visual{order:2;margin-top:var(--s6)}
-  .intervention-with-visual .intervention-grid{order:1}
+  .intervention-with-visual > *:first-child{order:2;margin-top:var(--s6)}
+  .intervention-with-visual > *:last-child{order:1}
   .project-gallery__grid{grid-template-columns:1fr}
   .project-gallery__item--wide{grid-column:auto}
   .project-nav__inner{grid-template-columns:1fr 1fr}
@@ -413,6 +413,11 @@
   .project-hero{height:auto;min-height:100svh;padding-bottom:var(--s12)}
   .project-hero__fg{position:relative;right:auto;bottom:auto;width:100%;margin-top:var(--s6);order:1}
   .project-hero__content{padding-right:var(--pad);order:0}
+}
+
+@media(max-width:768px){
+  .project-hero{background-attachment:scroll}
+  .project-focus{background-attachment:scroll}
 }
 
 /* ── SCROLL REVEALS ── */
