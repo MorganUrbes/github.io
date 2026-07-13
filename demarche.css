@@ -244,8 +244,8 @@
   border-color: rgba(108,75,246,0.3);
 }
 .dm-deliverable-icon {
-  width: 28px;
-  height: 28px;
+  width: 56px;
+  height: 56px;
   flex-shrink: 0;
   margin-top: 2px;
   object-fit: contain;

@@ -71,7 +71,7 @@
 }
 .project-card__logo img{
   width:80px;height:80px;
-  object-fit:contain;display:block;
+  object-fit:cover;border-radius:8px;display:block;
   image-rendering:-webkit-optimize-contrast;
 }
 
