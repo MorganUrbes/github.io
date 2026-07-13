@@ -63,7 +63,7 @@
 /* Logo — blanc arrondi comme la maquette */
 .project-card__logo{
   position:absolute;
-  top:calc(var(--s3) + 16px);left:calc(var(--s3) + 16px);
+  top:calc(var(--s3) + 32px);left:calc(var(--s3) + 32px);
   width:32px;height:32px;
   background:#fff;
   border-radius:12px;
