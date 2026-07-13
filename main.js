@@ -36,3 +36,26 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
 // ── Steps hover ──────────────────────────────
 const steps=document.querySelectorAll('.step');const stepsLine=document.querySelector('.steps-line');
 steps.forEach((s,i)=>{s.addEventListener('mouseenter',()=>{if(!stepsLine)return;const p=((i+.5)/steps.length)*100;stepsLine.style.background=`linear-gradient(90deg,transparent 0%,rgba(108,75,246,.3) 15%,rgba(108,75,246,.8) ${p}%,rgba(108,75,246,.3) 85%,transparent 100%)`});s.addEventListener('mouseleave',()=>{if(stepsLine)stepsLine.style.background=''})});
+
+// ── CV preview modal ──────────────────────────
+(function(){
+  const triggers=document.querySelectorAll('.cv-trigger');
+  if(!triggers.length)return;
+  const pdfUrl=triggers[0].getAttribute('href');
+  let modal;
+  function buildModal(){
+    modal=document.createElement('div');
+    modal.className='cv-modal-overlay';
+    modal.setAttribute('role','dialog');
+    modal.setAttribute('aria-modal','true');
+    modal.setAttribute('aria-label','Aperçu du CV');
+    modal.innerHTML=`<div class="cv-modal-box"><div class="cv-modal-header"><p class="cv-modal-title">Aperçu du CV</p><div class="cv-modal-actions"><a href="${pdfUrl}" download class="btn btn--primary btn--sm">Télécharger le CV</a><button class="cv-modal-close" aria-label="Fermer">×</button></div></div><iframe src="${pdfUrl}" class="cv-modal-frame" title="Aperçu du CV de Morgan Urbes"></iframe></div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+    modal.querySelector('.cv-modal-close').addEventListener('click',closeModal);
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+  }
+  function openModal(){if(!modal)buildModal();modal.classList.add('open');document.body.style.overflow='hidden'}
+  function closeModal(){if(!modal)return;modal.classList.remove('open');document.body.style.overflow=''}
+  triggers.forEach(t=>t.addEventListener('click',e=>{e.preventDefault();openModal()}));
+})();
